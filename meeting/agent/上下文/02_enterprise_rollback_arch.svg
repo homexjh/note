@@ -1,0 +1,30 @@
+<svg viewBox="0 0 680 384" width="100%" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>企业级 Agent 回滚分层架构</title>
+<desc>接入层、运行时含审批门、隔离 checkpoint store、WORM 审计日志、回滚控制器</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<rect x="140" y="28" width="400" height="48" rx="10" fill="#042C53" stroke="#85B7EB" stroke-width="1.5"/>
+<text x="340" y="50" text-anchor="middle" dominant-baseline="central" fill="#E6F1FB" font-size="14" font-weight="500" font-family="sans-serif">接入层 / API Gateway</text>
+<text x="340" y="68" text-anchor="middle" dominant-baseline="central" fill="#B5D4F4" font-size="12" font-family="sans-serif">鉴权 · 限流 · 租户路由</text>
+<line x1="340" y1="76" x2="340" y2="96" stroke="#444441" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="100" width="400" height="48" rx="10" fill="#26215C" stroke="#AFA9EC" stroke-width="1.5"/>
+<text x="340" y="122" text-anchor="middle" dominant-baseline="central" fill="#EEEDFE" font-size="14" font-weight="500" font-family="sans-serif">Agent 运行时</text>
+<text x="340" y="140" text-anchor="middle" dominant-baseline="central" fill="#CECBF6" font-size="12" font-family="sans-serif">规划 / 工具调用 + 人工审批门</text>
+<line x1="340" y1="148" x2="340" y2="168" stroke="#444441" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="172" width="400" height="48" rx="10" fill="#04342C" stroke="#5DCAA5" stroke-width="1.5"/>
+<text x="340" y="194" text-anchor="middle" dominant-baseline="central" fill="#E1F5EE" font-size="14" font-weight="500" font-family="sans-serif">Checkpoint Store</text>
+<text x="340" y="212" text-anchor="middle" dominant-baseline="central" fill="#9FE1CB" font-size="12" font-family="sans-serif">多租户隔离 · Postgres / Redis</text>
+<line x1="340" y1="220" x2="340" y2="240" stroke="#444441" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="244" width="400" height="48" rx="10" fill="#412402" stroke="#EF9F27" stroke-width="1.5"/>
+<text x="340" y="266" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="14" font-weight="500" font-family="sans-serif">审计日志 (WORM)</text>
+<text x="340" y="284" text-anchor="middle" dominant-baseline="central" fill="#FAC775" font-size="12" font-family="sans-serif">不可变 · 合规追踪</text>
+<line x1="340" y1="292" x2="340" y2="312" stroke="#444441" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="316" width="400" height="48" rx="10" fill="#4A1B0C" stroke="#F0997B" stroke-width="1.5"/>
+<text x="340" y="338" text-anchor="middle" dominant-baseline="central" fill="#FAECE7" font-size="14" font-weight="500" font-family="sans-serif">回滚控制器 / 事件重放引擎</text>
+<text x="340" y="356" text-anchor="middle" dominant-baseline="central" fill="#F5C4B3" font-size="12" font-family="sans-serif">点选 checkpoint 重建上下文</text>
+<path d="M 120 340 Q 58 250 122 196" fill="none" stroke="#E24B4A" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="62" y="262" fill="#F09595" font-size="12" font-family="sans-serif">回滚</text>
+</svg>
